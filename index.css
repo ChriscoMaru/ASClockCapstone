@@ -1,0 +1,156 @@
+.jumbotron {
+  font-family: "Josefin Sans", sans-serif;
+  background-color: rgb(186, 219, 210);
+}
+
+.timepicker {
+  margin: auto;
+  width: 50%;
+  border: 3px solid rgb(186, 219, 210);
+  border-radius: 10px;
+  padding: 10px;
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 25px;
+}
+.timepicker,
+input {
+  margin: auto;
+}
+
+body {
+  font-family: sans-serif;
+}
+
+/*
+.base-timer {
+  position: relative;
+  width: 100px;
+  height: 100px;
+}
+
+.base-timer__svg {
+  transform: scaleX(-1);
+}
+
+.base-timer__circle {
+  fill: none;
+  stroke: none;
+}
+
+.base-timer__path-elapsed {
+  stroke-width: 3px;
+  stroke: lightgrey;
+}
+
+.base-timer__path-remaining {
+  stroke-width: 3px;
+  //   stroke-linecap: round; 
+  transform: rotate(90deg);
+  transform-origin: center;
+  transition: 1s linear all;
+  fill-rule: nonzero;
+  stroke: currentColor;
+}
+
+.base-timer__path-remaining.green {
+  color: #003c7f;
+}
+
+.base-timer__path-remaining.orange {
+  color: #ffbf00;
+}
+
+.base-timer__path-remaining.red {
+  color: #d2222d;
+}
+
+.base-timer__label {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  color: #003c7f;
+  transition: 1s linear all;
+}
+*/
+body {
+  text-align: center;
+  background: #00ecb9;
+  font-family: sans-serif;
+  font-weight: 100;
+}
+
+h1 {
+  color: #396;
+  font-weight: 100;
+  font-size: 40px;
+  margin: 40px 0px 20px;
+}
+
+#clockdiv {
+  font-family: sans-serif;
+  color: #fff;
+  display: inline-block;
+  font-weight: 100;
+  text-align: center;
+  font-size: 30px;
+}
+
+#clockdiv > div {
+  padding: 10px;
+  border-radius: 3px;
+  background: #00bf96;
+  display: inline-block;
+}
+
+#clockdiv div > span {
+  padding: 15px;
+  border-radius: 3px;
+  background: #00816a;
+  display: inline-block;
+}
+
+.smalltext {
+  padding-top: 5px;
+  font-size: 16px;
+}
+#image-dropdown {
+  /*style the "box" in its minimized state*/
+  border: 1px solid black;
+  width: 400px;
+  height: 100px;
+  overflow: hidden;
+  /*animate the dropdown collapsing*/
+  transition: height 0.1s;
+}
+#image-dropdown:hover {
+  /*when expanded, the dropdown will get native means of scrolling*/
+  height: 200px;
+  overflow-y: scroll;
+  /*animate the dropdown expanding*/
+  transition: height 0.5s;
+}
+#image-dropdown input {
+  /*hide the nasty default radio buttons!*/
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+}
+#image-dropdown label {
+  /*style the labels to look like dropdown options*/
+  display: none;
+  margin: 2px;
+  height: 100%;
+  width: 100%;
+}
+#image-dropdown:hover label {
+  /*this is how labels render in the "expanded" state.
+     we want to see only the selected radio button in the collapsed menu,
+     and all of them when expanded*/
+  display: block;
+}

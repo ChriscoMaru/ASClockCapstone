@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="index.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>Project AS-Freindly Clock</title>
+  </head>
+
+  <body>
+    <div class="jumbotron text-center">
+      <h1>Project AS-Friendly Clock</h1>
+      <p>What is your name?</p>
+      <form>
+        <div class="input-group">
+          <input
+            type="email"
+            class="form-control"
+            size="50"
+            placeholder=""
+            required
+          />
+          <div class="input-group-btn">
+            <button type="button" class="btn btn-info">Enter</button>
+          </div>
+        </div>
+      </form>
+      <div class="container d-flex justify-content-center">
+        <!-- <img src="" height="400" width="400"> For a jumbostron picture -->
+      </div>
+    </div>
+
+    <!-- TASK BUILDER -->
+    <!-- List portion -->
+    <div class="container">
+      <div id="main" class="card card-body">
+        <h2 class="title">What do we want to do?</h2>
+        <form id="addForm" class="form-inline mb-3">
+          <input type="text" class="form-control mr-2" id="item" />
+          <!---->
+          <div id="image-dropdown">
+            <input type="radio" id="line" name="line-style1" value="eat" />
+            <label
+              for="line1"
+              style="
+                background: url('eating.jpg') 50% 50%;
+                background-repeat: no-repeat;
+              "
+            ></label>
+
+            <input type="radio" id="line" name="line-style2" value="sleep" />
+            <label
+              for="line2"
+              style="
+                background: url('sleeping.jpg') 50% 50%;
+                background-repeat: no-repeat;
+              "
+            ></label>
+            <input type="radio" id="line" name="line-style3" value="wake up" />
+            <label
+              for="line3"
+              style="
+                background: url('wakeup.jpg') 50% 50%;
+                background-repeat: no-repeat;
+              "
+            ></label>
+            <input
+              type="radio"
+              id="line"
+              name="line-style4"
+              value="brush teeth"
+            />
+            <label
+              for="line4"
+              style="
+                background: url('brushteeth.jpg') 50% 50%;
+                background-repeat: no-repeat;
+              "
+            ></label>
+            <input
+              type="radio"
+              id="line"
+              name="line-style5"
+              value="brush hair"
+            />
+            <label
+              for="line5"
+              style="
+                background: url('brushhair.jpg') 50% 50%;
+                background-repeat: no-repeat;
+              "
+            ></label>
+          </div>
+          <!---->
+          <input type="submit" class="btn btn-info" value="Submit" />
+        </form>
+        <h2 class="title">To Do:</h2>
+        <ul id="items" class="list-group">
+          <li class="list-group-item">
+            Item 1
+            <button class="btn btn-secondary btn-sm float-right delete">
+              X
+            </button>
+          </li>
+          <!-- <li class="list-group-item">Item 2 <button class="btn btn-secondary btn-sm float-right delete">X</button></li>
+         <li class="list-group-item">Item 3 <button class="btn btn-secondary btn-sm float-right delete">X</button></li>
+         <li class="list-group-item">Item 4 <button class="btn btn-secondary btn-sm float-right delete">X</button></li> -->
+        </ul>
+      </div>
+    </div>
+
+    <!--
+    <div id="app">
+      <script>
+        document.getElementById("app").innerHTML = (
+          <div class="base-timer">
+            <svg
+              class="base-timer__svg"
+              viewBox="0 0 100 100"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <g class="base-timer__circle">
+                <circle
+                  class="base-timer__path-elapsed"
+                  cx="50"
+                  cy="50"
+                  r="45"
+                ></circle>
+                <path
+                  id="base-timer-path-remaining"
+                  stroke-dasharray="283"
+                  class="base-timer__path-remaining ${remainingPathColor}"
+                  d="
+                M 50, 50
+                m -45, 0
+                a 45,45 0 1,0 90,0
+                a 45,45 0 1,0 -90,0
+              "
+                ></path>
+              </g>
+            </svg>
+            <span id="base-timer-label" class="base-timer__label">
+              ${formatTime(timeLeft)}
+            </span>
+          </div>
+        );
+      </script>
+    </div>
+-->
+
+    <!-- old clock timer
+    <div class= "timepicker d-flex justify-content-center">
+      <label for="appt">Lets pick a time</label>
+
+      <input type="time" id="appt" name="appt"
+       min="09:00" max="18:00" required>
+
+       <div class="input-group-btn">
+        <button type="button" class="btn btn-info">Enter</button>
+      </div>
+  </div> -->
+
+    <!-- jquery and minified bootstrap 4 -->
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+      integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+      integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+      crossorigin="anonymous"
+    ></script>
+    <script type="text/javascript" src="index.js"></script>
+  </body>
+</html>
